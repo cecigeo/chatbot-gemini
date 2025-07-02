@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-from db import save_message
 from gemini import query_gemini
 
 app = FastAPI()
