@@ -9,12 +9,12 @@
   "routes": [
      {
       "src": "/chat/welcome",
-      "methods": ["GET"],
+      "methods": ["OPTIONS","GET"],
       "dest": "api.py"
     },
     {
       "src": "/chat",
-      "methods": ["POST"],
+      "methods": ["OPTIONS","POST"],
       "dest": "api.py"
     }
   ]

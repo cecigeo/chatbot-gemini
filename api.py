@@ -24,7 +24,7 @@ async def welcome():
 
 @app.post("/chat")
 async def chat_endpoint(input: ChatInput):
-    user_id = input.user_id
+    #user_id = input.user_id
     message = input.message
 
     response = query_gemini(message)
