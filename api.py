@@ -29,12 +29,12 @@ async def chat_endpoint(input: ChatInput):
 
     response = query_gemini(message)
 
-    save_message(
-        user_id=user_id,
-        message=message,
-        intent="gemini_response",
-        response=response,
-        context=None
-    )
+    # save_message(
+    #     user_id=user_id,
+    #     message=message,
+    #     intent="gemini_response",
+    #     response=response,
+    #     context=None
+    # )
 
     return {"response": response}
