@@ -7,8 +7,14 @@
     }
   ],
   "routes": [
+     {
+      "src": "/chat/welcome",
+      "methods": ["GET"],
+      "dest": "api.py"
+    },
     {
-      "src": "/(.*)",
+      "src": "/chat",
+      "methods": ["POST"],
       "dest": "api.py"
     }
   ]
