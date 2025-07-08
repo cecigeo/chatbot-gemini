@@ -7,7 +7,6 @@ import nltk
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 from db import get_last_messages
-from gemini import query_gemini
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json", encoding="utf-8").read())
