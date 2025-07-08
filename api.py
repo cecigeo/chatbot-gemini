@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
 from db import save_message
-from gemini import query_gemini
+from main import get_response, predict_class, intents
 
 app = FastAPI()
 
@@ -23,17 +23,21 @@ app.add_middleware(
 async def welcome():
     return {"response": "Hola 👋 Soy tu asistente contable. ¿En qué puedo ayudarte?"}
 
-@app.post("/chat")
 async def chat_endpoint(input: ChatInput):
     user_id = input.user_id
     message = input.message
 
-    response = query_gemini(message)
+    # Predict the intent from the message
+    intents_list = predict_class(message)
+    
+    # Get the appropriate response
+    response = get_response(intents_list, intents, user_id)
 
+    # Save the message and response to the database
     save_message(
         user_id=user_id,
         message=message,
-        intent="gemini_response",
+        intent=intents_list[0]["intent"],  # You can update this logic to be more specific
         response=response,
         context=None
     )
