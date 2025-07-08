@@ -38,7 +38,7 @@ async def chat_endpoint(input: ChatInput):
     save_message(
         user_id=user_id,
         message=message,
-        intent=intents_list[0]["intent"],  # You can update this logic to be more specific
+        intent=intents_list[0]["intent"],
         response=response,
         context=None
     )
