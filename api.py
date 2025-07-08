@@ -23,6 +23,7 @@ app.add_middleware(
 async def welcome():
     return {"response": "Hola 👋 Soy tu asistente contable. ¿En qué puedo ayudarte?"}
 
+@app.post("/chat")
 async def chat_endpoint(input: ChatInput):
     user_id = input.user_id
     message = input.message
