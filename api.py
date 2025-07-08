@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
+from db import save_message
 from gemini import query_gemini
 
 app = FastAPI()
@@ -24,17 +25,17 @@ async def welcome():
 
 @app.post("/chat")
 async def chat_endpoint(input: ChatInput):
-    #user_id = input.user_id
+    user_id = input.user_id
     message = input.message
 
     response = query_gemini(message)
 
-    # save_message(
-    #     user_id=user_id,
-    #     message=message,
-    #     intent="gemini_response",
-    #     response=response,
-    #     context=None
-    # )
+    save_message(
+        user_id=user_id,
+        message=message,
+        intent="gemini_response",
+        response=response,
+        context=None
+    )
 
     return {"response": response}
