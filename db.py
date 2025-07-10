@@ -2,7 +2,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env-boty")
+load_dotenv(dotenv_path=".envbot")
 
 conn = psycopg2.connect(
     dbname=os.getenv("DB_NAME"),
