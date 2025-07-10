@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-from db import save_message
-from main import get_response, predict_class, intents
+from api.db import save_message
+from api.main import get_response, predict_class, intents
 
 app = FastAPI()
 

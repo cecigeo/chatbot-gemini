@@ -10,12 +10,12 @@
      {
       "src": "/chat/welcome",
       "methods": ["OPTIONS","GET"],
-      "dest": "api.py"
+      "dest": "api/api.py"
     },
     {
       "src": "/chat",
       "methods": ["OPTIONS","POST"],
-      "dest": "api.py"
+      "dest": "api/api.py"
     }
   ]
 }
