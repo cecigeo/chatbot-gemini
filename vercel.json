@@ -8,8 +8,13 @@
   ],
    "routes": [
     {
-      "src": "^/chat(?:$|/.*)$",
-      "methods": ["OPTIONS","GET","POST"],
+      "src": "/chat/welcome",
+      "methods": ["OPTIONS","GET"],
+      "dest": "api/api.py"
+    },
+    {
+      "src": "/chat",
+      "methods": ["OPTIONS","POST"],
       "dest": "api/api.py"
     }
   ]
