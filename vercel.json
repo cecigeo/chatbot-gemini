@@ -12,5 +12,21 @@
       "methods": ["OPTIONS","GET","POST"],
       "dest": "api/api.py"
     }
+  ],
+  "excludeFiles": [
+    "**/*.pyc",
+    "**/__pycache__/**",
+    ".env/",
+    ".git/**",
+    ".envbot**",
+    ".vercelignore**",
+    "intentst.json**",
+    "training/**",
+    "models/**",
+    "db.py**",
+    "main.py",
+    "README.md",
+    ".vercel",
+    "package.json"
   ]
 }
