@@ -10,9 +10,9 @@ from api.db import get_last_messages
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json", encoding="utf-8").read())
-words = pickle.load(open("words.pkl", "rb"))
-classes = pickle.load(open("classes.pkl", "rb"))
-model = load_model("chatbot.h5")
+words = pickle.load(open("./models/words.pkl", "rb"))
+classes = pickle.load(open("./models/classes.pkl", "rb"))
+model = load_model("./models/chatbot.h5")
 
 context = {}
 
