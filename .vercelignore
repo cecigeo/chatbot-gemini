@@ -1,9 +1,11 @@
 # Ignore local virtual-env (you had this as .env – rename it to venv/.venv)
 .env
 .envbot/
+.intents.json
 
 # Ignore all caches, notebooks, test & training code
 __pycache__/
+api/__pycache__
 *.pyc
 training/
 
