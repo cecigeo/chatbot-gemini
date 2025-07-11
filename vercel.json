@@ -6,17 +6,6 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    {
-      "src": "^/chat(?:$|/.*)$",
-      "methods": [
-        "OPTIONS",
-        "GET",
-        "POST"
-      ],
-      "dest": "api/api.py"
-    }
-  ],
   "headers": [
     {
       "source": "/chat/(.*)",
