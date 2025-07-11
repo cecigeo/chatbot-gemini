@@ -1,23 +1,13 @@
-# Ignore local virtual-env (you had this as .env – rename it to venv/.venv)
-.env
-.envbot/
-.intents.json
-
-# Ignore all caches, notebooks, test & training code
 __pycache__/
-api/__pycache__
-*.pyc
+.env/
+.git/
+.envbot
+.vercelignore
+intentst.json
 training/
-
-# Ignore Vercel’s own folder & VSCode settings
-.vercel/
-.vscode/
-
-# (Optional) Ignore anything else at top-level
-# but keep api/ and models/
-*
-!api/
-!api/**
-!models/
-!models/**
-!vercel.json
+models/
+db.py
+main.py
+README.md
+.vercel
+package.json
